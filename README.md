@@ -46,6 +46,7 @@ Para realizar practica hay que crear un fichero README.md formateado con markdow
 | Alan | Wake |
 
 #### Imagenes
+
 ![Un imagen](https://img.freepik.com/vector-gratis/gradiente-ilustracion-pajaro-colorido_343694-1741.jpg?w=740&t=st=1701798704~exp=1701799304~hmac=a2ad03b52c082da5f045ad307683da35665f2c27fc2542ac72e89980c9793a27 'Un imagen')
 
 
