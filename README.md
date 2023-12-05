@@ -55,7 +55,7 @@ Para realizar practica hay que crear un fichero README.md formateado con markdow
 
 #### Video
 
-![[Markdown, Curso Práctico para principiantes y desarrolladores]](https://www.youtube.com/watch?v=oxaH9CFpeEE&t=11s 'Video')
+[! [Markdown, Curso Práctico para principiantes y desarrolladores] ](https://www.youtube.com/watch?v=oxaH9CFpeEE&t=11s 'Video')
 
 #### To do list
 
