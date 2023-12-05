@@ -25,7 +25,7 @@ Para realizar practica hay que crear un fichero README.md formateado con markdow
 
 ~~tachado~~
 
->cita
+>cita :weary:
 
 
 #### Bloques de codigo
