@@ -31,12 +31,16 @@ Para realizar practica hay que crear un fichero README.md formateado con markdow
 #### Bloques de codigo
 
 ```xml
-<note>
-<to>Tove</to>
-<from>Jani</from>
-<heading>Reminder</heading>
-<body>Don't forget me this weekend!</body>
-</note>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="artistas.xsl"?>
+<artistas>
+<artista cod="a101">
+<nombreCompleto>Diego Velázquez</nombreCompleto>
+<nacimiento>1599</nacimiento>
+<fallecimiento>1660</fallecimiento>
+<pais>España</pais>
+<fichaCompleta>https://es.wikipedia.org/wiki/Diego_Vel%C3%A1zquez</fichaCompleta>
+</artista>
 
 ```
 #### Tablas
