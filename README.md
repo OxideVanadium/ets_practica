@@ -81,7 +81,7 @@ if __name__ == '__main__':
 
 <!-- Accesso a imagenes -->
 ![visual studio logo](https://1000logos.net/wp-content/uploads/2023/04/Visual-Studio-logo.png 'Logo Visual studio')
-![Captura de pantalla](/42-67x45.png)
+![Captura de pantalla](/capturas/Captura desde 2023-12-02 12-28-32.png)
 
 * [X] Tarea 1
 * [X] Tarea 2
