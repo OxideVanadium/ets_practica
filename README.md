@@ -1,45 +1,34 @@
-<!-- Encabezados -->
-# Title H1
-## Title H2
-### Title H3
-#### Title H4
-##### Title H5
-###### Title H6
+# Practica de ETS
+## Markdown
+Para realizar practica hay que crear un fichero README.md formateado con markdown
 
-<!-- Linea -->
-___
+
+### Ejemplos del texto formateado
+
+#### Lista ordenadas y desordenadas
+
+1. Elemento de lista
+    1. Subelemento de lista
+2. Elemento de lista
+3. Elemento de lista
 ---
+* Elemento de lista
+    * Subelemento de lista
+* Elemento de lista
+* Elemento de lista
 
-<!-- Listas desordenadas -->
+#### Texto formateado
 
-* Manzana
-    * Golden
-    * Reinetas
-* Pera
-* Kiwi
+**bold**
 
-<!-- Listas ordenadas -->
----
-1. Primero
-    1. Primero uno
-    2. Primero dos
-2. Segundo
-3. Tercero
----
-<!-- Tablas -->
+*italic*
 
-| Nombre | Apellidos |
-| -------|-----------|
-| Juan | Perez |
+~~tachado~~
 
-<!-- Tipos de letra -->
----
-Tipos de *letra* 
+>cita
 
-Tipos de **letra**
 
-Letra ~~tachada~~
-
+#### Bloques de codigo
 <!-- generar una linea de código -->
 ---
 `
@@ -82,7 +71,7 @@ if __name__ == '__main__':
 <!-- Accesso a imagenes -->
 ![visual studio logo](https://1000logos.net/wp-content/uploads/2023/04/Visual-Studio-logo.png 'Logo Visual studio')
 
-![Captura de pantalla](capturas/Captura desde 2023-12-02 12-28-32.png)
+![Captura de pantalla](capturas/42-67x45.png)
 
 * [X] Tarea 1
 * [X] Tarea 2
