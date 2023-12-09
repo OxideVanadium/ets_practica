@@ -1,35 +1,50 @@
-# Practica de ETS
-## Markdown
-Para realizar practica hay que crear un fichero README.md formateado con markdown
+<!-- Encabezados -->
+# Title H1
+## Title H2
+### Title H3
+#### Title H4
+##### Title H5
+###### Title H6
 
-
-### Ejemplos del texto formateado
-
-#### Lista ordenadas y desordenadas
-
-1. Elemento de lista
-    1. Subelemento de lista
-2. Elemento de lista
-3. Elemento de lista
+<!-- Linea -->
+___
 ---
-* Elemento de lista
-    * Subelemento de lista
-* Elemento de lista
-* Elemento de lista
 
-#### Texto formateado
+<!-- Listas desordenadas -->
 
-**bold**
+* Manzana
+    * Golden
+    * Reinetas
+* Pera
+* Kiwi
 
-*italic*
+<!-- Listas ordenadas -->
+---
+1. Primero
+    1. Primero uno
+    2. Primero dos
+2. Segundo
+3. Tercero
+---
+<!-- Tablas -->
 
-~~tachado~~
+| Nombre | Apellidos |
+| -------|-----------|
+| Juan | Perez |
 
->cita :weary:
+<!-- Tipos de letra -->
+---
+Tipos de *letra* 
 
+Tipos de **letra**
 
-#### Bloques de codigo
+Letra ~~tachada~~
 
+<!-- generar una linea de código -->
+---
+`
+console.log("hola mundo")
+`
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="artistas.xsl"?>
@@ -41,27 +56,34 @@ Para realizar practica hay que crear un fichero README.md formateado con markdow
 <pais>España</pais>
 <fichaCompleta>https://es.wikipedia.org/wiki/Diego_Vel%C3%A1zquez</fichaCompleta>
 </artista>
-
 ```
-#### Tablas
+```python
+def run(values: list) -> tuple:
+    max_value = values[0]
+    min_value = values[0]
+    for value in values:
+        if value < min_value:
+            min_value = value
+        elif value > max_value:
+            max_value = value
 
-| Nombre | Apellidos |
-|:---:|:---:|
-| Alan | Wake |
-
-#### Imagenes
-
-![Un imagen](https://img.freepik.com/vector-gratis/gradiente-ilustracion-pajaro-colorido_343694-1741.jpg?w=740&t=st=1701798704~exp=1701799304~hmac=a2ad03b52c082da5f045ad307683da35665f2c27fc2542ac72e89980c9793a27 'Un imagen')
-
-#### Video
-
-[! [Markdown, Curso Práctico para principiantes y desarrolladores](capturas/Captura desde 2023-12-05 18-42-06.png) ](https://www.youtube.com/watch?v=oxaH9CFpeEE&t=11s 'Video')
-
-#### To do list
-
-* [X] Un ejemplo
-* [X] Un ejemplo
-* [ ] Un ejemplo
+    return max_value, min_value
 
 
+if __name__ == '__main__':
+    run([4, 6, 2, 1, 9, 63, -134, 566])
+```
+<!-- Accesso a páginas web -->
+---
+[Periodico El Pais](https://elpais.com/ "Periodico chachi")
 
+[Google](https://www.google.com/)
+
+<!-- Accesso a imagenes -->
+![visual studio logo](https://1000logos.net/wp-content/uploads/2023/04/Visual-Studio-logo.png 'Logo Visual studio')
+![Captura de pantalla](/42-67x45.png)
+
+* [X] Tarea 1
+* [X] Tarea 2
+* [X] Tarea 3
+* [ ] Tarea 4
