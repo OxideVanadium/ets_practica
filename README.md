@@ -77,3 +77,9 @@ if __name__ == '__main__':
 * [X] Tarea 2
 * [X] Tarea 3
 * [ ] Tarea 4
+
+#### Tablas
+
+| Nombre | Apellidos |
+|:---:|:---:|
+| Alan | Wake |
