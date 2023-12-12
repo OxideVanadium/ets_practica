@@ -10,6 +10,7 @@
 
 ### Analisis de requisitos 
 ![img](1.jpg)
+
 Un análisis de requerimientos es **un estudio profundo de una necesidad tecnológica** que tiene una empresa, organización o negocio.
 
 En este proceso, se realiza un análisis exhaustivo del sistema que se va a desarrollar.  Se definen y aplican técnicas que permitan analizar los requisitos necesarios para su buen desarrollo. 
