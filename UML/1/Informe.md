@@ -5,7 +5,6 @@
 **Actor**|**Administrador**
 |---|---|
 Descripción|Gestion del sistema del transporte
-Características|
 Referencias| CU1, CU2, CU3
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
@@ -14,7 +13,6 @@ Fecha|11/01/2024
 **Actor**|**Usuario**
 |---|---|
 Descripción|Destinatario final del servicio
-Características|
 Referencias|CU2, CU4, CU5, CU6, CU7, Cu8, CU9, CU10
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
