@@ -8,7 +8,7 @@ Descripción|Gestion del sistema del transporte
 Referencias| CU1, CU2, CU3
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
-|
+
 
 **Actor**|**Usuario**
 |---|---|
@@ -16,7 +16,7 @@ Descripción|Destinatario final del servicio
 Referencias|CU2, CU4, CU5, CU6, CU7, Cu8, CU9, CU10
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
-|
+
 
 
 **Actor**|**Sistema ext posic.**
@@ -51,7 +51,7 @@ Pre-condiciones|Destino y medio del transporte seleccionados por usuario y admin
 Post-condiciones|Mostrar precio final
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
-|
+
 
 **Caso de Uso CU3**|**Alta y baja de usuarios**
 --|--
@@ -63,7 +63,7 @@ Pre-condiciones|Cumplir con los requisitos necessarios para registrarse en el si
 Post-condiciones|Se crea usuario/Se borra la cuenta del usuario
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
-|
+
 
 **Caso de Uso CU4**|**Login**
 ---|---
@@ -75,7 +75,7 @@ Pre-condiciones|Tener cuenta registrada en el sistema
 Post-condiciones|Acceder a los servicios del sistema disponibles para usuarios
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
-|
+
 
 **Caso de Uso CU5**|**Verificar credenciales**
 ---|---
@@ -88,7 +88,7 @@ Post-condiciones|Autorizacion del usuario en el sistema
 Notas|Accion obligatoria (“incluide”)
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
-|
+
 
 **Caso de Uso CU6**|**Geoposicionamiento**
 ---|---
@@ -110,7 +110,7 @@ Pre-condiciones|Usuario autorizado elige el destino final
 Post-condiciones|Se crea la ruta del viaje
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
-|
+
 
 **Caso de Uso CU8**|**Modificar ruta**
 --|--
@@ -121,7 +121,7 @@ Pre-condiciones|La ruta debe ser ya creada
 Post-condiciones|La ruta se modifica con respeto de los cambios realizados por cliente
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
-|
+
 
 **Caso de Uso CU9**|**Sugerir destinos interesantes**
 --|--
@@ -134,7 +134,7 @@ Post-condiciones|Mostrar la lista de los destinos interesantes
 Notas|Accion opcional (“extend”)
 Autor|Inna Vdovitsyna
 Fecha|11/01/2024
-|
+
 
 **Caso de Uso CU10**|**Mostrar puntos interés en ruta**
 --|--
