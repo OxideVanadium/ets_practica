@@ -26,7 +26,10 @@ Fecha|23/01/24
 Fuentes|Diagrama de los casos de uso
 Actor|Bibliotecario
 Descripción|Autorizarse en el sistema de biblioteca para gestionar el trabajo de la biblioteca
-Flujo básico|Abrir el sistema, introducir el nombre y contraseña
+**Flujo básico**|
+1|Abrir el sistema
+2|Introducir el nombre y contraseña
+**Flujo alternativo**|
 Pre-condiciones|Existir la cuenta del administrador
 Post-condiciones|Las acciones del administrador deberian estar disponibles
 Autor|Inna Vdovitsyna
@@ -37,7 +40,11 @@ Fecha|23/01/24
 Fuentes|Diagrama de los casos de uso
 Actor|Bibliotecario
 Descripción|Verificar los datos  introducidos por usuario
-Flujo básico|Buscar la cuenta, verificar el nombre, comprobar la contraseña de la cuenta
+**Flujo básico**|
+1|Buscar la cuenta
+2|Verificar el nombre
+3|Comprobar la contraseña de la cuenta
+**Flujo alternativo**|
 Pre-condiciones|Existir la cuenta del administrador
 Post-condiciones|Las acciones del administrador deberian estar disponibles
 Notas| accion obligatorio (include)
@@ -49,7 +56,10 @@ Fecha|23/01/24
 Fuentes|Diagrama de los casos de uso
 Actor|Bibliotecario
 Descripción|Verificar los datos  introducidos por usuario
-Flujo básico|Autorizarse en el sistema, añadir o borrar los libros del catalogo
+**Flujo básico**|
+1|Autorizarse en el sistema
+2|Añadir o borrar los libros del catalogo
+**Flujo alternativo**|
 Pre-condiciones|El catalogo de los libros debe estar creado
 Post-condiciones|Catalogo de libros disponibles modificado
 Autor|Inna Vdovitsyna
@@ -60,7 +70,11 @@ Fecha|23/01/24
 Fuentes|Diagrama de los casos de uso
 Actor|Usuario
 Descripción|Prestar libro disponible del catalogo
-Flujo básico|Buscar un libro en catalogo, comprobar que libro esta disponible, prestar el libro
+**Flujo básico**|
+1|Buscar un libro en catalogo
+2|Comprobar que libro esta disponible
+3|Prestar el libro
+**Flujo alternativo**|
 Pre-condiciones|Libro debe ser disponible
 Post-condiciones|Libro y el usuario se associan 
 Autor|Inna Vdovitsyna
@@ -71,7 +85,10 @@ Fecha|23/01/24
 Fuentes|Diagrama de los casos de  uso
 Actor|Usuario, Bibliotecario
 Descripción|Buscar en el catalogo y comprobar su estado
-Flujo básico|Buscar libro en catalago, comprobar, si libro esta disponible
+**Flujo básico**|
+1|Buscar libro en catalago
+2|Comprobar, si libro esta disponible
+**Flujo alternativo**|
 Pre-condiciones|Libro debe estar registrado en el catalogo
 Post-condiciones|
 Autor|Inna Vdovitsyna
@@ -82,7 +99,11 @@ Fecha|23/01/24
 Fuentes|Diagrama de los casos de  uso
 Actor|Usuario, Bibliotecario
 Descripción|Proponer lista de recomendaciones
-Flujo básico|Buscar libros del mismo autor/del mismo genero/etc, formar la lista de recomendaciones, mostrar la lista al usuario
+**Flujo básico**|
+1|Buscar libros del mismo autor/del mismo genero/etc
+2|Formar la lista de recomendaciones
+3|Mostrar la lista al usuario
+**Flujo alternativo**|
 Pre-condiciones|Los libros en catalogo deben estar asociados entre si mismos
 Post-condiciones|Formacion de la lista de recomendaciones
 Nota|accion opcional (extend)
@@ -94,7 +115,10 @@ Fecha|23/01/24
 Fuentes|Diagrama de los casos de  uso
 Actor|Usuario
 Descripción|Volver libro prestado por usuario
-Flujo básico|Encontrar el libro en la lista de libros prestados por usuario, eliminar el libro de esta lista
+**Flujo básico**|
+1|Encontrar el libro en la lista de libros prestados por usuario
+2|Eliminar el libro de esta lista
+**Flujo alternativo**|
 Pre-condiciones|El libro debe estar prestado por el mismo usuario que lo vuelve
 Post-condiciones|El libro desaparece de la lista de libros prestados
 Autor|Inna Vdovitsyna
