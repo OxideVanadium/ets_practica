@@ -4,6 +4,21 @@
 
 ## Especificacion de los actores
 
+Actor|Usuario (incluye Pasajero y Agente)
+--|--
+Descripción|Destinario de los servicios del sistema de reserva
+Relaciones|Sistema del pago externo
+Referencias|Autorizacion, Reservar vuelo, Buscar vuelo, Cancelar vuelo, Check-in, Gestionar reserva, Psagar
+Autor|Inna Vdovitsyna
+Fecha|23/01/24
+
+Actor|Sistema del pago externo
+--|--
+Descripción|Realizacion del pago por las reservas
+Relaciones|Usuario
+Referencias|Pagar
+Autor|Inna Vdovitsyna
+Fecha|23/01/24
 
 
 ## Especificacion de los casos de uso
@@ -12,7 +27,7 @@
 **Caso de Uso CU**|**Buscar vuelo**
 --|--
 Fuentes| Diagrama de los casos de uso
-Actor|Pasajero
+Actor|Usuario (incluye Pasajero y Agente)
 Descripción|Búsqueda de vuelos por parte de un pasajero.
 Flujo básico| Pasajero accede al sistema, Selecciona "Buscar Vuelo", Ingresa criterios de búsqueda, Sistema muestra resultados, Pasajero selecciona vuelo, Sistema muestra detalles del vuelo
 Pre-condiciones|Pasajero autenticado, sistema tiene información de vuelos.
@@ -24,8 +39,7 @@ Fecha|23/01/2024
 **Caso de Uso CU**|**Reserva**
 --|--
 Fuentes| Diagrama de los casos de uso
-Actor|Pasajero
-Actor|Pasajero
+Actor|Usuario (incluye Pasajero y Agente)
 Descripción|Reserva de Vuelo
 Flujo básico|Pasajero accede al sistema, Selecciona "Buscar Vuelo", Ingresa criterios de búsqueda, Sistema muestra resultados, Pasajero selecciona vuelo, Sistema muestra detalles del vuelo, Pasajero selecciona "Reservar Vuelo", Sistema solicita confirmación, Pasajero confirma la reserva, Sistema confirma la reserva al pasajero
 Pre-condiciones|Pasajero autenticado, sistema tiene información de vuelos
@@ -36,7 +50,7 @@ Fecha|23/01/2024
 **Caso de Uso CU**|**Check-in**
 --|--
 Fuentes| Diagrama de los casos de uso
-Actor|Pasajero
+Actor|Usuario (incluye Pasajero y Agente)
 Descripción|Check-in de Vuelo
 Flujo básico|Pasajero accede al sistema, Selecciona "Consultar Reservas", Sistema muestra las reservas del pasajero, Pasajero selecciona la reserva para hacer check-in, Sistema muestra detalles de la reserva, Pasajero selecciona "Realizar Check-in", Sistema solicita confirmación de check-in, Pasajero confirma el check-in, Sistema emite tarjeta de embarque y actualiza el estado del check-in
 Pre-condiciones|Pasajero autenticado, pasajero tiene al menos una reserva con check-in disponible
@@ -47,7 +61,7 @@ Fecha|23/01/2024
 **Caso de Uso CU**|**Gestionar Reserva**
 --|--
 Fuentes| Diagrama de los casos de uso
-Actor|Agente de Reservas
+Actor|Usuario (incluye Pasajero y Agente)
 Descripción|Gestionar Reserva
 Flujo básico|Agente de Reservas accede al sistema, Selecciona "Gestionar Reservas", Sistema muestra la lista de reservas pendientes, Agente selecciona una reserva para gestionar, Sistema muestra detalles de la reserva, Agente realiza operaciones de gestión (modificar detalles, asignar asientos, etc.), Sistema confirma las modificaciones y actualiza la reserva
 Pre-condiciones|Agente de Reservas autenticado, existencia de al menos una reserva pendiente de gestión.
@@ -58,7 +72,7 @@ Fecha|23/01/2024
 **Caso de Uso CU**|**Cancelar Reserva**
 --|--
 Fuentes| Diagrama de los casos de uso
-Actor|Pasajero
+Actor|Usuario (incluye Pasajero y Agente)
 Descripción|Cancelar Reserva
 Flujo básico|Pasajero accede al sistema, Selecciona "Consultar Reservas",Sistema muestra las reservas del pasajero, Pasajero selecciona la reserva a cancelar, Sistema muestra detalles de la reserva, Pasajero selecciona "Cancelar Reserva", Sistema solicita confirmación, Pasajero confirma la cancelación, Sistema cancela la reserva y actualiza el estado
 Pre-condiciones|Pasajero autenticado, pasajero tiene al menos una reserva activa
@@ -69,7 +83,7 @@ Fecha|23/01/2024
 **Caso de Uso CU**|**Autorización**
 --|--
 Fuentes| Diagrama de los casos de uso
-Actor|Usuario del Sistema
+Actor|Usuario (incluye Pasajero y Agente)
 Descripción|Autorización de Usuario en el Sistema
 Flujo básico|Usuario intenta acceder a funciones que requieren autorización, Sistema verifica la identidad del usuario, Si el usuario está autenticado, se le concede autorización, Si no está autenticado, se le solicita iniciar sesión, Usuario proporciona credenciales de inicio de sesión, Sistema verifica las credenciales y concede o niega la autorización, Si la autorización es concedida, el usuario puede acceder a las funciones
 Pre-condiciones|Usuario intenta acceder a funciones que requieren autorización, usuario autenticado o dispuesto a iniciar sesión.
@@ -80,10 +94,11 @@ Fecha|23/01/2024
 **Caso de Uso CU**|**Pagar**
 --|--
 Fuentes| Diagrama de los casos de uso
-Actor|Pasajero
+Actor|Usuario (incluye Pasajero y Agente), Sistema del pago externo, 
 Descripción|Proceso de Pago de Reserva
 Flujo básico|Pasajero confirma la reserva de vuelo, Sistema presenta las opciones de pago, Pasajero selecciona el método de pago (tarjeta de crédito, PayPal, etc.), Sistema solicita la información de pago al pasajero, Pasajero proporciona la información requerida, Sistema verifica la validez de la información de pago, Si la verificación es exitosa, se procesa el pago, Sistema genera un recibo de pago y lo presenta al pasajero, Pasajero recibe confirmación de la reserva y el pago
 Pre-condiciones|Pasajero ha confirmado la reserva, sistema tiene opciones de pago configuradas
 Post-condiciones|Reserva marcada como pagada, generación de un recibo de pago
+Nota| Accion obligatoria(include)
 Autor|Inna Vdovitsyna
 Fecha|23/01/2024
