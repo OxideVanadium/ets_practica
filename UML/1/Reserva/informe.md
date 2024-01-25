@@ -36,6 +36,7 @@ Descripción|Búsqueda de vuelos por parte de un pasajero.
 4 |Sistema muestra resultados
 5 |Pasajero selecciona vuelo
 6 |Sistema muestra detalles del vuelo
+**Flujo básico**| 
 Pre-condiciones|Pasajero autenticado, sistema tiene información de vuelos.
 Post-condiciones|Sistema registra búsqueda del pasajero, muestra resultados al pasajero
 Autor|Inna Vdovitsyna
