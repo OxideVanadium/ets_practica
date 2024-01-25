@@ -1,101 +1,104 @@
-# Casos de uso de una biblioteca
-<img src="biblioteca.png">
+# Casos de Uso Reserva de vuelos 
+
+<img src="reserva.png">
 
 ## Especificacion de los actores
 
-**Actor**| **Administrador**
----|---|
-Descripción|Gestion de la biblioteca
-Relaciones|Usuario (Buscar libro)
-Referencias|Autorizacion, modificacion del catalago, buscar libro, crear ususario
+Actor|Usuario (incluye Pasajero y Agente)
+--|--
+Descripción|Destinario de los servicios del sistema de reserva
+Relaciones|Sistema del pago externo
+Referencias|Autorizacion, Reservar vuelo, Buscar vuelo, Cancelar vuelo, Check-in, Gestionar reserva, Psagar
 Autor|Inna Vdovitsyna
 Fecha|23/01/24
 
-**Actor**| **Usuario**
----|---|
-Descripción|Gestion de la biblioteca
-Relaciones|Usuario (Buscar libro)
-Referencias|Buscar libro, Prestar libro, Volver libro
+Actor|Sistema del pago externo
+--|--
+Descripción|Realizacion del pago por las reservas
+Relaciones|Usuario
+Referencias|Pagar
 Autor|Inna Vdovitsyna
 Fecha|23/01/24
+
 
 ## Especificacion de los casos de uso
 
-**Caso de Uso CU**|**Autorizacion**
----|----
-Fuentes|Diagrama de los casos de uso
-Actor|Bibliotecario
-Descripción|Autorizarse en el sistema de biblioteca para gestionar el trabajo de la biblioteca
-Flujo básico|Abrir el sistema, introducir el nombre y contraseña
-Pre-condiciones|Existir la cuenta del administrador
-Post-condiciones|Las acciones del administrador deberian estar disponibles
-Autor|Inna Vdovitsyna
-Fecha|23/01/24
 
-**Caso de Uso CU**|**Verificar credenciales**
----|---
-Fuentes|Diagrama de los casos de uso
-Actor|Bibliotecario
-Descripción|Verificar los datos  introducidos por usuario
-Flujo básico|Buscar la cuenta, verificar el nombre, comprobar la contraseña de la cuenta
-Pre-condiciones|Existir la cuenta del administrador
-Post-condiciones|Las acciones del administrador deberian estar disponibles
-Notas| accion obligatorio (include)
-Autor|Inna Vdovitsyna
-Fecha|23/01/24
-
-**Caso de Uso CU**|**Modificar catalogo de los libros**
+**Caso de Uso CU**|**Buscar vuelo**
 --|--
-Fuentes|Diagrama de los casos de uso
-Actor|Bibliotecario
-Descripción|Verificar los datos  introducidos por usuario
-Flujo básico|Autorizarse en el sistema, añadir o borrar los libros del catalogo
-Pre-condiciones|El catalogo de los libros debe estar creado
-Post-condiciones|Catalogo de libros disponibles modificado
+Fuentes| Diagrama de los casos de uso
+Actor|Usuario (incluye Pasajero y Agente)
+Descripción|Búsqueda de vuelos por parte de un pasajero.
+Flujo básico| Pasajero accede al sistema, Selecciona "Buscar Vuelo", Ingresa criterios de búsqueda, Sistema muestra resultados, Pasajero selecciona vuelo, Sistema muestra detalles del vuelo
+Pre-condiciones|Pasajero autenticado, sistema tiene información de vuelos.
+Post-condiciones|Sistema registra búsqueda del pasajero, muestra resultados al pasajero
 Autor|Inna Vdovitsyna
-Fecha|23/01/24
+Fecha|23/01/2024
 
-**Caso de Uso CU**|**Prestar libro**
---|--
-Fuentes|Diagrama de los casos de uso
-Actor|Usuario
-Descripción|Prestar libro disponible del catalogo
-Flujo básico|Buscar un libro en catalogo, comprobar que libro esta disponible, prestar el libro
-Pre-condiciones|Libro debe ser disponible
-Post-condiciones|Libro y el usuario se associan 
-Autor|Inna Vdovitsyna
-Fecha|23/01/24
 
-**Caso de Uso CU**|**Buscar libro**
+**Caso de Uso CU**|**Reserva**
 --|--
-Fuentes|Diagrama de los casos de  uso
-Actor|Usuario, Bibliotecario
-Descripción|Buscar en el catalogo y comprobar su estado
-Flujo básico|Buscar libro en catalago, comprobar, si libro esta disponible
-Pre-condiciones|Libro debe estar registrado en el catalogo
-Post-condiciones|
+Fuentes| Diagrama de los casos de uso
+Actor|Usuario (incluye Pasajero y Agente)
+Descripción|Reserva de Vuelo
+Flujo básico|Pasajero accede al sistema, Selecciona "Buscar Vuelo", Ingresa criterios de búsqueda, Sistema muestra resultados, Pasajero selecciona vuelo, Sistema muestra detalles del vuelo, Pasajero selecciona "Reservar Vuelo", Sistema solicita confirmación, Pasajero confirma la reserva, Sistema confirma la reserva al pasajero
+Pre-condiciones|Pasajero autenticado, sistema tiene información de vuelos
+Post-condiciones|Sistema registra la reserva del pasajero, genera un número de reserva
 Autor|Inna Vdovitsyna
-Fecha|23/01/24
+Fecha|23/01/2024
 
-**Caso de Uso CU**|**Recomendar libro**
+**Caso de Uso CU**|**Check-in**
 --|--
-Fuentes|Diagrama de los casos de  uso
-Actor|Usuario, Bibliotecario
-Descripción|Proponer lista de recomendaciones
-Flujo básico|Buscar libros del mismo autor/del mismo genero/etc, formar la lista de recomendaciones, mostrar la lista al usuario
-Pre-condiciones|Los libros en catalogo deben estar asociados entre si mismos
-Post-condiciones|Formacion de la lista de recomendaciones
-Nota|accion opcional (extend)
+Fuentes| Diagrama de los casos de uso
+Actor|Usuario (incluye Pasajero y Agente)
+Descripción|Check-in de Vuelo
+Flujo básico|Pasajero accede al sistema, Selecciona "Consultar Reservas", Sistema muestra las reservas del pasajero, Pasajero selecciona la reserva para hacer check-in, Sistema muestra detalles de la reserva, Pasajero selecciona "Realizar Check-in", Sistema solicita confirmación de check-in, Pasajero confirma el check-in, Sistema emite tarjeta de embarque y actualiza el estado del check-in
+Pre-condiciones|Pasajero autenticado, pasajero tiene al menos una reserva con check-in disponible
+Post-condiciones|Sistema emite tarjeta de embarque, actualiza el estado del check-in
 Autor|Inna Vdovitsyna
-Fecha|23/01/24
+Fecha|23/01/2024
 
-**Caso de Uso CU**|**Volver libro**
+**Caso de Uso CU**|**Gestionar Reserva**
 --|--
-Fuentes|Diagrama de los casos de  uso
-Actor|Usuario
-Descripción|Volver libro prestado por usuario
-Flujo básico|Encontrar el libro en la lista de libros prestados por usuario, eliminar el libro de esta lista
-Pre-condiciones|El libro debe estar prestado por el mismo usuario que lo vuelve
-Post-condiciones|El libro desaparece de la lista de libros prestados
+Fuentes| Diagrama de los casos de uso
+Actor|Usuario (incluye Pasajero y Agente)
+Descripción|Gestionar Reserva
+Flujo básico|Agente de Reservas accede al sistema, Selecciona "Gestionar Reservas", Sistema muestra la lista de reservas pendientes, Agente selecciona una reserva para gestionar, Sistema muestra detalles de la reserva, Agente realiza operaciones de gestión (modificar detalles, asignar asientos, etc.), Sistema confirma las modificaciones y actualiza la reserva
+Pre-condiciones|Agente de Reservas autenticado, existencia de al menos una reserva pendiente de gestión.
+Post-condiciones|Sistema actualiza la reserva según las modificaciones realizadas por el agente
 Autor|Inna Vdovitsyna
-Fecha|23/01/24
+Fecha|23/01/2024
+
+**Caso de Uso CU**|**Cancelar Reserva**
+--|--
+Fuentes| Diagrama de los casos de uso
+Actor|Usuario (incluye Pasajero y Agente)
+Descripción|Cancelar Reserva
+Flujo básico|Pasajero accede al sistema, Selecciona "Consultar Reservas",Sistema muestra las reservas del pasajero, Pasajero selecciona la reserva a cancelar, Sistema muestra detalles de la reserva, Pasajero selecciona "Cancelar Reserva", Sistema solicita confirmación, Pasajero confirma la cancelación, Sistema cancela la reserva y actualiza el estado
+Pre-condiciones|Pasajero autenticado, pasajero tiene al menos una reserva activa
+Post-condiciones|Sistema cancela la reserva seleccionada
+Autor|Inna Vdovitsyna
+Fecha|23/01/2024
+
+**Caso de Uso CU**|**Autorización**
+--|--
+Fuentes| Diagrama de los casos de uso
+Actor|Usuario (incluye Pasajero y Agente)
+Descripción|Autorización de Usuario en el Sistema
+Flujo básico|Usuario intenta acceder a funciones que requieren autorización, Sistema verifica la identidad del usuario, Si el usuario está autenticado, se le concede autorización, Si no está autenticado, se le solicita iniciar sesión, Usuario proporciona credenciales de inicio de sesión, Sistema verifica las credenciales y concede o niega la autorización, Si la autorización es concedida, el usuario puede acceder a las funciones
+Pre-condiciones|Usuario intenta acceder a funciones que requieren autorización, usuario autenticado o dispuesto a iniciar sesión.
+Post-condiciones|Usuario autorizado para acceder a las funciones solicitadas
+Autor|Inna Vdovitsyna
+Fecha|23/01/2024
+
+**Caso de Uso CU**|**Pagar**
+--|--
+Fuentes| Diagrama de los casos de uso
+Actor|Usuario (incluye Pasajero y Agente), Sistema del pago externo, 
+Descripción|Proceso de Pago de Reserva
+Flujo básico|Pasajero confirma la reserva de vuelo, Sistema presenta las opciones de pago, Pasajero selecciona el método de pago (tarjeta de crédito, PayPal, etc.), Sistema solicita la información de pago al pasajero, Pasajero proporciona la información requerida, Sistema verifica la validez de la información de pago, Si la verificación es exitosa, se procesa el pago, Sistema genera un recibo de pago y lo presenta al pasajero, Pasajero recibe confirmación de la reserva y el pago
+Pre-condiciones|Pasajero ha confirmado la reserva, sistema tiene opciones de pago configuradas
+Post-condiciones|Reserva marcada como pagada, generación de un recibo de pago
+Nota| Accion obligatoria(include)
+Autor|Inna Vdovitsyna
+Fecha|23/01/2024
