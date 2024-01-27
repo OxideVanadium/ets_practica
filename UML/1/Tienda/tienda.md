@@ -7,7 +7,7 @@ Actor|Cliente
 ---|---
 Descripción|El actor Cliente representa a los usuarios finales que interactúan con la tienda en línea. Estos usuarios realizan acciones como explorar el catálogo, realizar compras y gestionar su cuenta en el sistema.
 Relaciones|Administrador
-Referencias|Realizar Compra, Ver Catálogo,Gestionar Cuenta
+Referencias|Realizar Compra, Ver Catálogo
 Autor|Inna Vdovitsyna
 Fecha|27/01/2024
 
