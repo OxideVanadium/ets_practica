@@ -14,7 +14,6 @@ Fecha|27/01/2024
 Actor|Administrador
 ---|---
 Descripción|El actor Administrador representa a los usuarios con privilegios elevados que gestionan el sistema de la tienda en línea. Estos usuarios tienen acceso a funciones de administración, como gestionar inventario, revisar pedidos y mantener el sistema en funcionamiento.
-Características|Accede al sistema con credenciales de administrador, Gestionar el inventario de productos, Supervisar y gestionar pedidos,Acceder a funciones de administración avanzadas.
 Relaciones|Cliente
 Referencias|Gestionar Inventario, Gestionar Pedidos, Autorización
 Autor|Inna Vdovitsyna
