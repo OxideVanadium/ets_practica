@@ -26,11 +26,11 @@ Caso de Uso CU|Ver Catálogo
 Fuentes|Diagrama de los casos del uso
 Actor|Cliente, Adninistrador
 Descripción|Este caso de uso permite al cliente visualizar los productos disponibles en el catálogo de la tienda en línea.
-Flujo básico|
+**Flujo básico**|
 1|El cliente accede al sistema.
 2|Selecciona la opción "Ver Catálogo".
 3|El sistema muestra la lista de productos disponibles.
-Flujo Alternativo|
+**Flujo Alternativo**|
 2|Si el catálogo está vacío:
 ---|El sistema muestra un mensaje indicando que no hay productos disponibles en este momento.
 ---|Sugiere al cliente volver a intentarlo más tarde o explorar otras secciones.
@@ -44,13 +44,13 @@ Caso de Uso CU|Realizar Compra
 Fuentes|Diagrama de los casos del uso
 Actor|Cliente, Adninistrador
 Descripción|Este caso de uso permite al cliente realizar la compra de productos en la tienda en línea.
-Flujo básico|
+**Flujo básico**|
 1|El cliente accede al sistema.
 2|Explora el catálogo y selecciona productos.
 3|Agrega productos al carrito de compras.
 4|Realiza el pago.
 5|El sistema registra la compra y actualiza el inventario.
-Flujo Alternativo|
+**Flujo Alternativo**|
 4|Si el sistema no puede procesar el pago:
 ---|Muestra un mensaje de error indicando que el pago no pudo ser completado.
 ---|Proporciona opciones para revisar la información de pago o utilizar otro método.
@@ -64,12 +64,12 @@ Caso de Uso CU|Gestionar Inventario
 Fuentes|Diagrama de los casos del uso
 Actor|Administrador
 Descripción|Este caso de uso permite al administrador gestionar el inventario de productos de la tienda en línea. El administrador puede realizar acciones como agregar nuevos productos, actualizar detalles de productos existentes o eliminar productos del inventario.
-Flujo básico|
+**Flujo básico**|
 1|El administrador accede al sistema con credenciales de administrador.
 2|Selecciona la opción "Gestionar Inventario".
 3|Visualiza la lista de productos existentes en el inventario.
 4|Puede realizar acciones como agregar nuevos productos, actualizar detalles o eliminar productos.
-Flujo Alternativo|
+**Flujo Alternativo**|
 4|Si el sistema encuentra un error al intentar gestionar el inventario:
 ---|Muestra un mensaje de error indicando la naturaleza del problema.
 ---|Proporciona detalles sobre cómo corregir el error o solicitar asistencia técnica.
@@ -83,12 +83,12 @@ Caso de Uso CU|Gestionar Pedidos
 Fuentes|Diagrama de los casos del uso
 Actor|Administrador
 Descripción|Este caso de uso permite al administrador gestionar los pedidos realizados por los clientes.
-Flujo básico|
+**Flujo básico**|
 1|El administrador accede al sistema con credenciales de administrador.
 2|Selecciona la opción "Gestionar Pedidos".
 3|Visualiza la lista de pedidos pendientes.
 4|Puede marcar pedidos como enviados, ver detalles de los pedidos, etc.
-Flujo Alternativo|
+**Flujo Alternativo**|
 4|Si el sistema encuentra un error al intentar gestionar los pedidos:
 ---|Muestra un mensaje de error indicando la naturaleza del problema.
 ---|Proporciona detalles sobre cómo corregir el error o solicitar asistencia técnica.
